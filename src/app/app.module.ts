@@ -9,8 +9,8 @@ import { MovieListComponent } from './components/movies/movie-list/movie-list.co
 import { MovieItemComponent } from './components/movies/movie-item/movie-item.component';
 import { ButtonComponent } from './components/button/button.component';
 
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
