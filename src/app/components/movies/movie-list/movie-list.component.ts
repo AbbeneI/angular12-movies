@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MOVIES } from '../data';
+
 
 @Component({
   selector: 'app-movie-list',
@@ -6,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movie-list.component.scss']
 })
 export class MovieListComponent implements OnInit {
-
+  movies = MOVIES;
   constructor() { }
 
   ngOnInit(): void {

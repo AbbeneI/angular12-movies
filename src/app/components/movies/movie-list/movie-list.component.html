@@ -1,1 +1,13 @@
-<p>movie-list works!</p>
+<div>
+    <p>movie-list works!</p>
+
+    <h2>My Heroes</h2>
+    <ul class="movie-list">
+        <li *ngFor="let movie of movies">
+
+            <span class="badge"></span> {{movie.title}}
+            <br />
+            {{movie.releaseDate}}
+        </li>
+    </ul>
+</div>

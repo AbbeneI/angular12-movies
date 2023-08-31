@@ -5,7 +5,13 @@
     right: 0;
 
     width: 100vw;
-    height: 75px;
+    height: var(--nav-height);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid black;
 
     padding: 0;
     z-index: 5;
