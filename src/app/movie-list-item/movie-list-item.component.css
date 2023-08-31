@@ -1,0 +1,33 @@
+.movie-poster {
+    height: 180px;
+
+}
+
+.movie-details {
+    margin-top: 0.5rem;
+}
+
+.movie-id {
+    font-size: 30px;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: -10%;
+    opacity: 0.5;
+    border-radius: 50%;
+    background: #fff;
+    color: white;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.movie-list-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
