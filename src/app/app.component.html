@@ -1,16 +1,9 @@
-<app-navbar></app-navbar>
+<app-header></app-header>
 <section>
-  <app-carousel></app-carousel>
+  <h1>{{title}}</h1>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+  </nav>
+  <router-outlet></router-outlet>
 </section>
-<section>
-  <app-movie-list></app-movie-list>
-</section>
-
-<div class="bg">
-  <div class="bg-col-container">
-    <div class="bg-col"></div>
-    <div class="bg-col"></div>
-    <div class="bg-col"></div>
-    <div class="bg-col"></div>
-  </div>
-</div>
+<app-messages></app-messages>

@@ -1,36 +1,48 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
-import { MovieListComponent } from './components/movies/movie-list/movie-list.component';
-import { MovieItemComponent } from './components/movies/movie-item/movie-item.component';
-import { ButtonComponent } from './components/button/button.component';
 
-// import { HttpClientModule } from '@angular/common/http';
-// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryDataService } from './in-memory-data.service';
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { MoviesComponent } from './movies/movies.component';
+import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MessagesComponent } from './messages/messages.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    CarouselComponent,
-    MovieListComponent,
-    MovieItemComponent,
-    ButtonComponent
-  ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
-    // HttpClientModule,
-    // HttpClientInMemoryWebApiModule.forRoot(
-    //   InMemoryDataService, { dataEncapsulation: false }
-    // )
+    HttpClientModule,
+
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    MoviesComponent,
+    MovieDetailComponent,
+    MessagesComponent,
+    MovieSearchComponent,
+    NavbarComponent,
+    FooterComponent,
+    HeaderComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
