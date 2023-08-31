@@ -27,13 +27,11 @@ nav {
     position: relative;
 }
 
-
 .header-dropdown-label {
     width: fit-content;
 }
 
 .header-dropdown-menu {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -62,4 +60,9 @@ nav {
 .header-dropdown-menu:hover {
     opacity: 1;
     visibility: visible;
+}
+
+app-movie-search {
+    height: fit-content;
+    max-height: 35.5px;
 }

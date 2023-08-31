@@ -9,7 +9,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-
+  height: 100%;
 }
 
 * {
@@ -119,3 +119,4 @@ a {}
 section {
   padding: 0.5rem;
 }
+

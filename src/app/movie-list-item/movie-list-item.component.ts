@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from '../movie';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-movie-list-item',
