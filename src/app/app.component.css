@@ -2,6 +2,7 @@
   --margin-header: 10%;
 }
 
+
 h1 {
   margin-bottom: 0;
 }
@@ -26,14 +27,13 @@ nav a.active {
 }
 
 app-header {
-  position: fixed;
-  top: var(--margin-header);
-  left: 5vw;
-  right: 5vw;
 
-  background: red;
-}
+  padding: 0.5rem;
+  width: calc(100% - 1rem);
 
-section:first-of-type {
-  margin-top: 200px;
+  border: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+
 }

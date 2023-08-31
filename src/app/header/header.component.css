@@ -1,3 +1,7 @@
+:root {
+    --bg-dropdown: #fff;
+}
+
 nav {
     height: 100px;
 
@@ -9,4 +13,53 @@ nav {
 
     padding: 0;
     z-index: 5;
+}
+
+.header-dropdown-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    position: relative;
+}
+
+.header-dropdown {
+    position: relative;
+}
+
+
+.header-dropdown-label {
+    width: fit-content;
+}
+
+.header-dropdown-menu {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    padding: 0.25rem;
+    border: 1px solid black;
+
+    position: absolute;
+    opacity: 0;
+
+    transition: opacity 0.2s ease;
+    visibility: hidden;
+
+    background: var(--bg-dropdown);
+
+}
+
+.header-dropdown-label:hover+.header-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-dropdown-menu:hover {
+    opacity: 1;
+    visibility: visible;
 }

@@ -41,7 +41,7 @@ import { HeaderComponent } from './header/header.component';
     MovieSearchComponent,
     NavbarComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   bootstrap: [AppComponent]
 })
