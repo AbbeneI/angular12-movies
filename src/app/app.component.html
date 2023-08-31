@@ -1,11 +1,12 @@
 <app-header></app-header>
-<section>
+<section class="landing">
   <h1>{{title}}</h1>
   <nav>
     <a routerLink="/dashboard">Dashboard</a>
   </nav>
   <router-outlet></router-outlet>
 </section>
-<section>
+<section class="movie-lists">
+  <app-movies></app-movies>
 </section>
 <app-messages></app-messages>

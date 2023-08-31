@@ -1,11 +1,6 @@
-<h2>My Movies</h2>
-
-<div>
-  <label for="new-movie">Movie title: </label>
+<div class="movie-list-container">
+  <h2>Top Streaming Movies</h2>
+  <div class="movie-list">
+    <app-movie-list-item class="movie" *ngFor="let movie of movies" [movie]="movie"></app-movie-list-item>
+  </div>
 </div>
-
-<ul class="movies">
-  <li *ngFor="let movie of movies">
-      <span class="badge">{{movie.id}}</span> {{movie.title}}
-  </li>
-</ul>

@@ -17,6 +17,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { MovieListItemComponent } from './movie-list-item/movie-list-item.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   imports: [
@@ -42,6 +44,8 @@ import { HeaderComponent } from './header/header.component';
     NavbarComponent,
     FooterComponent,
     HeaderComponent,
+    MovieListItemComponent,
+    CarouselComponent,
   ],
   bootstrap: [AppComponent]
 })

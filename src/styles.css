@@ -27,6 +27,8 @@ body {
   background: var(--bg-global);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 app-root {
