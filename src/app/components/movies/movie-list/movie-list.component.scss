@@ -1,0 +1,30 @@
+.movie-list-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.movie-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin: 0 1rem;
+
+    min-height: 250px;
+}
+
+.movie:first-of-type {
+    margin-left: 0;
+}
