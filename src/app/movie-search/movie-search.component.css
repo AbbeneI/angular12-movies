@@ -37,7 +37,7 @@ li {
 
 .search-label {
   position: absolute;
-  transform: translate(20%, -196%);
+  transform: translate(20%, -205%);
   color: black;
   font-weight: 300;
   transition: opacity 0.3s ease;

@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
+
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
@@ -21,7 +23,6 @@ import { MovieListItemComponent } from './movie-list-item/movie-list-item.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackgroundGridComponent } from './background-grid/background-grid.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { NgCarouselModule } from 'angular-custom-carousel';
 import { CarouselComponent } from './carousel/carousel.component';
 
 
@@ -35,7 +36,6 @@ import { CarouselComponent } from './carousel/carousel.component';
     FormsModule,
     HttpClientModule,
     MatDialogModule,
-    NgCarouselModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
