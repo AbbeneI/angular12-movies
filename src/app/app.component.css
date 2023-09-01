@@ -2,6 +2,21 @@
   --margin-header: 10%;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10%)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+
+.content {
+  animation: fadeIn 0.3s ease;
+}
 
 h1 {
   margin-bottom: 0;
@@ -24,23 +39,4 @@ nav a:hover {
 
 nav a.active {
   background-color: black;
-}
-
-app-header {
-  position: absolute;
-  
-  padding: 0.5rem;
-  width: calc(100% - 1rem);
-
-  border: 1px solid black;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.5rem;
-
-  border-radius: 1rem;
-  background: black;
-  color: white;
 }

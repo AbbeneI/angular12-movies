@@ -21,6 +21,7 @@ import { MovieListItemComponent } from './movie-list-item/movie-list-item.compon
 import { CarouselComponent } from './carousel/carousel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackgroundGridComponent } from './background-grid/background-grid.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -28,15 +29,14 @@ import { BackgroundGridComponent } from './background-grid/background-grid.compo
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-
+    MatDialogModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   declarations: [
     AppComponent,
@@ -52,6 +52,7 @@ import { BackgroundGridComponent } from './background-grid/background-grid.compo
     CarouselComponent,
     BackgroundGridComponent,
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

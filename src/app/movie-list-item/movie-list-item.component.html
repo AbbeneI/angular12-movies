@@ -1,6 +1,5 @@
-<div class="movie-list-item">
+<div class="movie-list-item" (click)="openDialog()">
     <div class="movie-poster" [style.backgroundImage]="'url('+ movie.posterPath +')'">
-        <div class="movie-id">{{movie.id}}</div>
     </div>
     <div class="movie-details">
         <div>95%</div>

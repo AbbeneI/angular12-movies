@@ -1,27 +1,49 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 import { Movie } from '../movie';
-import {MatDialog} from '@angular/material/dialog';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-movie-list-item',
   templateUrl: './movie-list-item.component.html',
   styleUrls: ['./movie-list-item.component.css']
 })
+
 export class MovieListItemComponent implements OnInit {
   @Input() movie: Movie = {
     id: 0,
-    posterPath:
-      "https://image.tmdb.org/t/p/w500/bsg0mrxUKyJoL4oSGP5mlhEsqp.jpg",
-    releaseDate: "date",
-    title: "oops",
-    cast: [
-      "hi",
-      "hello"
-    ]
+    posterPath: "",
+    releaseDate: "",
+    title: "",
+    cast: ["", ""]
   };
-  constructor() { }
+
+  constructor(public dialog: MatDialog) { }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(MovieListItemDialogContent, {
+      data: this.movie
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
   ngOnInit(): void {
   }
 
+}
+@Component({
+  selector: 'movie-list-item-dialog-content',
+  templateUrl: 'movie-list-item-dialog-content.html',
+  styleUrls: ['./movie-list-item-dialog-content.css']
+})
+export class MovieListItemDialogContent {
+  constructor(
+    public dialogRef: MatDialogRef<MovieListItemComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Movie) { }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }
