@@ -1,9 +1,20 @@
 .site-footer {
-    background-color: #26272b;
+    background-color: #000;
     padding: 45px 0 20px;
     font-size: 15px;
     line-height: 24px;
     color: #737373;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 10px;
+}
+
+.one {
+    grid-column: 1/1;
+}
+
+.two {
+    grid-column: 2/2;
 }
 
 .site-footer hr {
