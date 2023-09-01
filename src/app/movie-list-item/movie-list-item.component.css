@@ -8,7 +8,31 @@
 }
 
 .movie-details {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
+    text-overflow: ellipsis;
+    max-height: 67.5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.movie-details-title {
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+.movie-details * {
+    display: block;
+    width: 100%;
+
+}
+
+.movie-details div {
+    font-weight: 900;
+    font-size: 1.2rem;
 }
 
 .movie-id {
@@ -34,13 +58,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    flex-wrap: wrap;
     transition: transform 0.2s ease;
-
 }
 
 .movie-list-item:hover {
-    --s: scale(1.2) transform: var(--s);
-    -webkit-transform: scale(1.2);
+    --s: scale(1.05) translateY(-3%);
+    transform: var(--s);
+    -webkit-transform: var(--s);
 
 }
-

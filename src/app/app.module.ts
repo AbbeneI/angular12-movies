@@ -20,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
 import { MovieListItemComponent } from './movie-list-item/movie-list-item.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BackgroundGridComponent } from './background-grid/background-grid.component';
 
 @NgModule({
   imports: [
@@ -49,6 +50,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     MovieListItemComponent,
     CarouselComponent,
+    BackgroundGridComponent,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,8 @@
-<div class="movie-list-container">
-  <h2>Top Streaming Movies</h2>
-  <div class="movie-list">
-    <app-movie-list-item class="movie" *ngFor="let movie of movies" [movie]="movie"></app-movie-list-item>
+<h2 class="movie-title">{{title}}</h2>
+<div class="movie-list-container-super">
+  <div class="movie-list-container">
+    <div class="movie-list">
+      <app-movie-list-item class="movie" *ngFor="let movie of movies" [movie]="movie"></app-movie-list-item>
+    </div>
   </div>
 </div>

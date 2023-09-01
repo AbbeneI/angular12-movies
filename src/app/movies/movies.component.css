@@ -1,15 +1,19 @@
+app-movies {
+  margin-bottom: 5rem;
+
+}
+
 .movie-list-container {
   width: 100%;
-  height: fit-content;
+  height: 300px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  padding: 0 1rem;
+  padding: 1rem 0 0.5rem 1rem;
+  /* In order to account for visual stagger vs title caused by padding */
+  transform: translateX(-1rem);
 
   overflow: auto;
+
+  margin-bottom: 4rem;
 }
 
 .movie-list {
@@ -20,12 +24,20 @@
   gap: 1rem;
 }
 
-.movie-list-container::after {
+.movie-list-container-super {
+  position: relative;
+}
+
+.movie-list-container-super::after {
   content: "";
+  position: absolute;
+  transform: translate(0, 0);
   top: 0;
   right: 0;
-  width: 20px;
-  background-color: blue;
+  height: 300px;
+  display: flex;
+  width: 100px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 
 }
 
@@ -44,4 +56,8 @@
 
 movie-list-item {
   position: relative;
+}
+
+.movie-title {
+  margin-bottom: 0.5rem;
 }

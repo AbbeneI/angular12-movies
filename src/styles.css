@@ -10,10 +10,7 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   height: 100%;
-}
-
-* {
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
 }
 
 body {
@@ -35,20 +32,51 @@ app-root {
   width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
 h1 {
-  color: #264D73;
-  font-size: 2.5rem;
+  margin-top: 0;
+  font-size: 3.052rem;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: 2.441rem;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+h1 {
+  color: rgb(71, 71, 71);
 }
 
 h2,
 h3 {
   color: #444;
-  font-weight: lighter;
 }
 
-h3 {
-  font-size: 1.3rem;
-}
 
 a {
   cursor: pointer;
@@ -119,4 +147,3 @@ a {}
 section {
   padding: 0.5rem;
 }
-

@@ -27,6 +27,8 @@ nav a.active {
 }
 
 app-header {
+  position: absolute;
+  
   padding: 0.5rem;
   width: calc(100% - 1rem);
 
@@ -38,4 +40,7 @@ app-header {
   align-items: center;
   gap: 0.5rem;
 
+  border-radius: 1rem;
+  background: black;
+  color: white;
 }
