@@ -1,5 +1,19 @@
-:root {
-    --bg-dropdown: #fff;
+:root {}
+
+.header-content {
+    padding: 0.5rem;
+
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+
+    border-radius: 1rem;
+    background: black;
+    color: white;
 }
 
 nav {
@@ -21,15 +35,20 @@ nav {
     flex-wrap: nowrap;
     gap: 1rem;
     position: relative;
+    margin-left: 1rem;
 }
 
 .header-dropdown {
     position: relative;
 }
 
-
 .header-dropdown-label {
     width: fit-content;
+}
+
+.header-dropdown-label,
+.header-dropdown-menu {
+    min-width: 120px;
 }
 
 .header-dropdown-menu {
@@ -39,19 +58,16 @@ nav {
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+
     gap: 0.5rem;
 
-    padding: 0.25rem;
-    border: 1px solid black;
-
+    padding: 0.5rem;
+    background: rgb(80, 80, 80);
     position: absolute;
     opacity: 0;
 
     transition: opacity 0.2s ease;
     visibility: hidden;
-
-    background: var(--bg-dropdown);
-
 }
 
 .header-dropdown-label:hover+.header-dropdown-menu {
@@ -62,4 +78,61 @@ nav {
 .header-dropdown-menu:hover {
     opacity: 1;
     visibility: visible;
+}
+
+app-movie-search {
+    height: fit-content;
+    max-height: 45.5px;
+}
+
+a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+a::before,
+a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+a::before {
+    background-color: #969696;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: white;
+}
+
+a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+a:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+a:hover span {
+    transform: translate3d(-200%, 0, 0);
 }

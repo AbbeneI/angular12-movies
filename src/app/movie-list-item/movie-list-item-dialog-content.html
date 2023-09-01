@@ -1,0 +1,20 @@
+<div mat-dialog-content>
+    <div class="dialog-image">
+        <img alt="Poster for data.title" class="movie-poster big" src={{data.posterPath}}>
+    </div>
+    <div class="dialog-content">
+        <h2 mat-dialog-title>{{data.title}}</h2>
+        <div class="dialog-rating-container">
+            <img class="dialog-rating" alt="Rated PG-13" src="../../assets/RATED_PG-13.svg">
+            <div> {{data.releaseDate}} |
+                Superhero, Action, Thriller</div>
+        </div>
+        <p class="dialog-cast">{{data.cast}}</p>
+        <p class="dialog-desc">
+            Diana Prince lives quietly among mortals in the vibrant, sleek 1980s -- an era of excess driven by the
+            pursuit
+            of having it all. Though she's come into her full powers, she maintains a low profile by curating ancient
+            artifacts, and only performing heroic acts incognito. But soon, Diana will have to ...
+        </p>
+    </div>
+</div>

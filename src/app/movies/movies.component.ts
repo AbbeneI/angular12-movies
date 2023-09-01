@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Movie } from '../movie';
 import { MovieService } from '../movie.service';
@@ -10,6 +10,7 @@ import { MovieService } from '../movie.service';
 })
 export class MoviesComponent implements OnInit {
   movies: Movie[] = [];
+  @Input() title: string = 'Top Streaming Movies';
 
   constructor(private movieService: MovieService) { }
 
@@ -21,6 +22,4 @@ export class MoviesComponent implements OnInit {
     this.movieService.getMovies()
       .subscribe(movies => this.movies = movies);
   }
-
-
 }

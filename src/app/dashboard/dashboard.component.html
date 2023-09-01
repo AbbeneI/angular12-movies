@@ -1,10 +1,4 @@
-<app-movie-search></app-movie-search>
-
-<h2>Top Movies</h2>
+<h2>Top-Rated Movies Today</h2>
 <div class="movies-menu">
-  <a *ngFor="let movie of movies" routerLink="/detail/{{movie.id}}">
-    {{movie.title}}
-    {{movie.releaseDate}}
-    <img src="{{movie.posterPath}}" alt="" class="movie-poster">
-  </a>
+  <app-movie-list-item class="movie" *ngFor="let movie of movies" [movie]="movie"></app-movie-list-item>
 </div>

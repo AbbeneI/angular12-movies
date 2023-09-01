@@ -8,6 +8,7 @@ label {
   margin-bottom: .5rem;
 
 }
+
 input {
   padding: .5rem;
   width: 100%;
@@ -23,6 +24,26 @@ input:focus {
 li {
   list-style-type: none;
 }
+
+.search-box {
+  width: 300px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.search-component {
+  position: relative;
+}
+
+.search-label {
+  position: absolute;
+  transform: translate(20%, -205%);
+  color: black;
+  font-weight: 300;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+}
+
 .search-result li a {
   border-bottom: 1px solid gray;
   border-left: 1px solid gray;
@@ -44,4 +65,9 @@ li {
 ul.search-result {
   margin-top: 0;
   padding-left: 0;
+}
+
+input:active~.search-label,
+input:focus~.search-label {
+  opacity: 0;
 }

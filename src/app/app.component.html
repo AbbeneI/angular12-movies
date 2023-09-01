@@ -1,12 +1,11 @@
-<app-header></app-header>
-<section class="landing">
-  <h1>{{title}}</h1>
-  <nav>
-    <a routerLink="/dashboard">Dashboard</a>
-  </nav>
-  <router-outlet></router-outlet>
-</section>
-<section class="movie-lists">
-  <app-movies></app-movies>
-</section>
-<app-messages></app-messages>
+<div class="content" id="smooth-content" #content>
+  <app-header></app-header>
+  <section class="landing">
+    <router-outlet></router-outlet>
+  </section>
+  <section class="movie-lists">
+    <app-movies [title]="titleStreaming"></app-movies>
+    <app-movies [title]="titleBoxOffice"></app-movies>
+  </section>
+  <app-footer></app-footer>
+</div>

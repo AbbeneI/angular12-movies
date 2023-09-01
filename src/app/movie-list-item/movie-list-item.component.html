@@ -1,9 +1,9 @@
-<div class="movie-list-item">
-    <img class="movie-poster" src="{{movie.posterPath}}">
-    <div class="movie-id">{{movie.id}}</div>
-    <div class="movie-details">
-        {{movie.title}}
-        <br />
-    </div>
+<div class="movie-list-item" (click)="openDialog()">
+    <img alt="Poster for movie.title" class="movie-poster" src={{movie.posterPath}}>
+<div class="movie-details">
+    <div>95%</div>
+    <br />
+    <h3 class="movie-details-title">{{movie.title}}</h3>
 
+</div>
 </div>
