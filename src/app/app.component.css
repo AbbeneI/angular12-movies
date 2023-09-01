@@ -40,3 +40,8 @@ nav a:hover {
 nav a.active {
   background-color: black;
 }
+
+.landing {
+  margin-top: 3rem;
+}
+
