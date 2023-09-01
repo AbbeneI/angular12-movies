@@ -1,10 +1,6 @@
-:root {
-    --bg-dropdown: #fff;
-}
+:root {}
 
 .header-content {
-    position: absolute;
-
     padding: 0.5rem;
 
     border: 1px solid black;
@@ -39,6 +35,7 @@ nav {
     flex-wrap: nowrap;
     gap: 1rem;
     position: relative;
+    margin-left: 1rem;
 }
 
 .header-dropdown {
@@ -49,25 +46,28 @@ nav {
     width: fit-content;
 }
 
+.header-dropdown-label,
 .header-dropdown-menu {
+    min-width: 120px;
+}
+
+.header-dropdown-menu {
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
+
     gap: 0.5rem;
 
-    padding: 0.25rem;
-    border: 1px solid black;
-
+    padding: 0.5rem;
+    background: rgb(80, 80, 80);
     position: absolute;
     opacity: 0;
 
     transition: opacity 0.2s ease;
     visibility: hidden;
-
-    background: var(--bg-dropdown);
-
 }
 
 .header-dropdown-label:hover+.header-dropdown-menu {
@@ -84,3 +84,44 @@ app-movie-search {
     height: fit-content;
     max-height: 35.5px;
 }
+
+.link--leda {
+    overflow: hidden;
+}
+
+.link--leda::before {
+    height: 2px;
+    top: calc(100% - 5px);
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+}
+
+.link--leda:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+.link--leda::after {
+    content: attr(data-text);
+    height: 100%;
+    top: 0;
+    background: none;
+    transform-origin: 100% 50%;
+    transform: translate3d(150%, 0, 0);
+    transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+}
+
+.link--leda:hover::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.link--leda span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.5, 0.5, 0.3, 1);
+}
+
+.link--leda:hover span {
+    transform: translate3d(-150%, 0, 0);
+}
+

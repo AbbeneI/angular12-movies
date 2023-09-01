@@ -2,9 +2,14 @@
     height: 180px;
     width: fit-content;
     aspect-ratio: 1.8/2.4;
-    background-position: left;
+    /* background-position: left;
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+    border-radius: 5px;
+}
+
+.movie-poster.big {
+    border-radius: 20px;
 }
 
 .movie-details {

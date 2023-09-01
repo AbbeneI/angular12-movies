@@ -18,25 +18,31 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MovieListItemComponent } from './movie-list-item/movie-list-item.component';
-import { CarouselComponent } from './carousel/carousel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BackgroundGridComponent } from './background-grid/background-grid.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgCarouselModule } from 'angular-custom-carousel';
+import { CarouselComponent } from './carousel/carousel.component';
+
+
+
 
 @NgModule({
   imports: [
-    BrowserModule,
-    FormsModule,
     AppRoutingModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
     HttpClientModule,
     MatDialogModule,
+    NgCarouselModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    BrowserAnimationsModule,
+
   ],
   declarations: [
     AppComponent,
@@ -49,8 +55,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     FooterComponent,
     HeaderComponent,
     MovieListItemComponent,
-    CarouselComponent,
     BackgroundGridComponent,
+    CarouselComponent,
   ],
 
   bootstrap: [AppComponent]
