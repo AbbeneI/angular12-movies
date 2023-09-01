@@ -26,6 +26,7 @@ body {
   width: 100%;
   max-width: 1200px;
   background: var(--bg-global);
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -145,8 +146,6 @@ input[type="text"] {
 li {
   list-style-type: none;
 }
-
-a {}
 
 section {
   padding: 0.5rem;
