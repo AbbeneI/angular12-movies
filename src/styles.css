@@ -1,3 +1,5 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
 /* Global Styles */
 :root {
   --padding-bg: 100px;

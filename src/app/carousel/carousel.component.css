@@ -1,4 +1,4 @@
-.carousel-container {
+/* .carousel-container {
     width: 100%;
     max-height: 600px;
     margin-bottom: 4rem;
@@ -48,4 +48,44 @@
 
 .slider-link.right img {}
 
-.slider-link.left img {}
+.slider-link.left img {} */
+
+/* ------------------------------ */
+
+/* Center the carousel */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Style the carousel images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Customize the carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* Customize the active indicator */
+.carousel-indicators .active {
+    background-color: #007bff;
+}
+
+.carousel {
+    height: 400px;
+    width: 600px;
+}
