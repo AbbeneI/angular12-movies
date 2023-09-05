@@ -26,6 +26,7 @@ import { BackgroundGridComponent } from './background-grid/background-grid.compo
 import { MatDialogModule } from '@angular/material/dialog';
 import { CarouselComponent } from './carousel/carousel.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarouselSideContentComponent } from './carousel-side-content/carousel-side-content.component';
 
 
 
@@ -56,6 +57,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MovieListItemComponent,
     BackgroundGridComponent,
     CarouselComponent,
+    CarouselSideContentComponent,
   ],
 
   bootstrap: [AppComponent]

@@ -1,9 +1,9 @@
 /* Style the carousel images */
 .carousel-item img {
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 6/4;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    max-width: 812px;
+    max-height: 545.11px;
+    object-fit: cover;
+
 }
 
 /* Customize the carousel controls */
@@ -22,7 +22,6 @@
 .carousel {
     height: 100%;
     width: 100%;
-    aspect-ratio: 4/6;
 
     grid-row: 1/4;
     grid-column: 1/4;
@@ -42,7 +41,6 @@
     width: 100%;
     height: 100%;
     max-height: calc(545.11px + 2rem);
-    aspect-ratio: 4/6;
 
     background-color: white;
     border-radius: 20px;
@@ -65,23 +63,8 @@
 
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 1;
     row-gap: 1rem;
     grid-auto-flow: row;
-}
-
-.grid-content {
-    width: 100%;
-    height: 100%;
-    background-color: green;
-    border-radius: 20px;
-
-    overflow: hidden;
-}
-
-.grid-content img {
-    height: 110%;
-    width: 110%;
 }
 
 .carousel-item-content {
@@ -106,11 +89,10 @@
     font-weight: 300;
 }
 
-
 .carousel-item h2,
 .carousel-item h3 {
     color: white;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .carousel:hover .carousel-item-content h2,
@@ -118,13 +100,9 @@
     transform: translateY(-10%);
 }
 
-.carousel-inner::after {
-    transition: opacity 0.3s ease;
-    opacity: 0;
-}
-
 .carousel-inner {
     border-radius: 20px;
+    max-height: 100%;
     overflow: hidden;
 }
 
@@ -139,5 +117,9 @@
     right: 0;
     z-index: 1;
     cursor: pointer;
+}
 
+.carousel-inner::after {
+    transition: opacity 0.3s ease;
+    opacity: 0;
 }

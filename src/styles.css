@@ -150,3 +150,7 @@ section {
   padding: 0.5rem;
   margin-top: 3rem;
 }
+
+section:first-of-type {
+  margin-top: 0rem;
+}
