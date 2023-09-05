@@ -52,7 +52,6 @@ nav {
 }
 
 .header-dropdown-menu {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -64,10 +63,12 @@ nav {
     padding: 0.5rem;
     background: rgb(80, 80, 80);
     position: absolute;
+    z-index: 6;
     opacity: 0;
 
     transition: opacity 0.2s ease;
     visibility: hidden;
+
 }
 
 .header-dropdown-label:hover+.header-dropdown-menu {
