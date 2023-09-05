@@ -1,17 +1,25 @@
-:root {}
+header {
+    width: 100%;
+    height: auto;
+    background: black;
+    position: absolute;
+    z-index: 10;
+
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
 .header-content {
-    padding: 0.5rem;
-
-    border: 1px solid black;
+    padding: 0.5rem 2rem;
 
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
+    width: 100vw;
 
-    border-radius: 1rem;
     background: black;
     color: white;
 }
@@ -52,7 +60,6 @@ nav {
 }
 
 .header-dropdown-menu {
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -64,6 +71,7 @@ nav {
     padding: 0.5rem;
     background: rgb(80, 80, 80);
     position: absolute;
+    z-index: 6;
     opacity: 0;
 
     transition: opacity 0.2s ease;

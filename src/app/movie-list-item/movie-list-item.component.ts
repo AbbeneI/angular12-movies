@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, Inject } from '@angular/core';
+import { Component, OnInit, Input, Inject, Pipe } from '@angular/core';
 import { Movie } from '../movie';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-
 @Component({
   selector: 'app-movie-list-item',
   templateUrl: './movie-list-item.component.html',
@@ -21,7 +20,7 @@ export class MovieListItemComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(MovieListItemDialogContent, {
-      data: this.movie
+      data: this.movie,
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -41,7 +40,8 @@ export class MovieListItemComponent implements OnInit {
 export class MovieListItemDialogContent {
   constructor(
     public dialogRef: MatDialogRef<MovieListItemComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Movie) { }
+    @Inject(MAT_DIALOG_DATA) public data: Movie) {
+  }
 
   onNoClick(): void {
     this.dialogRef.close();

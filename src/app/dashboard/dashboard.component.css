@@ -1,11 +1,13 @@
-h2 {
+.dashboard-title {
   text-align: center;
+  margin-top: 3rem;
 }
 
 .movies-menu {
   padding: 1rem 0 0.5rem 0;
 
   margin: auto;
+  margin-bottom: 3rem;
   max-width: 1000px;
 
   /* flexbox */
