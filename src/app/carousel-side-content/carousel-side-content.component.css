@@ -2,7 +2,7 @@
     width: 100%;
     height: 100%;
     background-color: green;
-    border-radius: 20px;
+    border-radius: var(--border-radius-big);
     position: relative;
     overflow: hidden;
 }
