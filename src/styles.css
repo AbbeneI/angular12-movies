@@ -161,3 +161,16 @@ section:first-of-type {
 .landing {
   padding-top: 1rem;
 }
+
+
+
+.landing,
+.movie-lists {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: auto;
+}
