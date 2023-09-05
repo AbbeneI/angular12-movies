@@ -3,8 +3,12 @@
     padding: 45px 0 20px;
     line-height: 24px;
     color: #737373;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+}
+
+.container {
+    margin: auto;
+    max-width: 1200px;
+
 }
 
 .one {
