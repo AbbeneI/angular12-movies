@@ -17,6 +17,12 @@ Start the server using ng-serve.
 ng serve --open
    ```  
 
+If you are using an incompatible version of Node for Angular v12, follow the commands [here](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) in order to install nvm.
 
 
+After nvm is installed, use the command 
+```
+nvm install vX.Y.Z
+```
+to install the required version of Node as listed in your terminal output.
 
